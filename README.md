@@ -8,7 +8,14 @@ This setup is completely based on examples from these repos:
 
 ## Usage
 
-Start with
+Create the external network required
+
+```
+docker network create nginx-proxy-network
+```
+
+Start the proxy with
+
 ```bash
 docker-compose up -d
 ```
