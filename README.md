@@ -8,7 +8,7 @@ This setup is completely based on examples from these repos:
 
 ## Usage
 
-Create the external network required
+Create the required external network
 
 ```
 docker network create nginx-proxy-network
