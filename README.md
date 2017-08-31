@@ -38,3 +38,5 @@ networks:
     external:
       name: nginx-proxy-network
 ```
+
+There is also more realistic setup for running this proxy in front of WordPress + MariaDB + Nginx setup. [Check it out!](https://github.com/bond-agency/docker-wpbp)
