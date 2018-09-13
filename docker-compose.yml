@@ -5,6 +5,9 @@ services:
     restart: always
     image: nginx:1.13.12
     container_name: nginx
+    logging:
+      options:
+        max-size: "10m"
     ports:
       - 80:80
       - 443:443
@@ -24,6 +27,9 @@ services:
     build:
       context: .
     container_name: nginx-gen
+    logging:
+      options:
+        max-size: "10m"
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
       - ./nginx/vhost.d:/etc/nginx/vhost.d
@@ -39,6 +45,9 @@ services:
     restart: always
     image: jrcs/letsencrypt-nginx-proxy-companion:v1.8.1
     container_name: nginx-letsencrypt
+    logging:
+      options:
+        max-size: "10m"
     volumes:
       - ./nginx/html:/usr/share/nginx/html
       - ./nginx/conf.d:/etc/nginx/conf.d
