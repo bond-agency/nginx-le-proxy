@@ -40,3 +40,11 @@ networks:
 ```
 
 There is also more realistic setup for running this proxy in front of WordPress + MariaDB + Nginx setup. [Check it out!](https://github.com/bond-agency/docker-wpbp)
+
+## Creating locally-trusted certificates (OSX)
+
+To create local certificates you need to have brew installed. To create local trusted certificate run:
+
+```bash
+./local-cert.sh example.local
+```
