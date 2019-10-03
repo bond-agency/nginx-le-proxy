@@ -10,9 +10,9 @@ install_mkcert() {
 create_cert() {
   local domain=$1
   mkcert $1
-  mv "$1.pem" "nginx/certs/$1.crt"
-  mv "$1-key.pem" "nginx/certs/$1.key"
-  echo "Certificate and key created: $1.crt $1.key"
+  mv "$domain.pem" "nginx/certs/$domain.crt"
+  mv "$domain-key.pem" "nginx/certs/$domain.key"
+  echo "Certificate and key created: $domain.crt $domain.key"
   docker-compose restart
 }
 
