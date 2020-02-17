@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   # The nginx proxy
   nginx:
@@ -14,9 +14,9 @@ services:
       - ./custom.conf:/etc/nginx/conf.d/custom.conf:ro
       - ./nginx/html:/usr/share/nginx/html
       - ./nginx/certs:/etc/nginx/certs:ro
+      - ./maintenance.html:/var/www/error/maintenance.html
     environment:
       - NGINX_DOCKER_GEN_CONTAINER=nginx-gen
-
 
   # The docker-gen to generate nginx config
   nginx-gen:
