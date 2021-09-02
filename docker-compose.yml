@@ -40,8 +40,6 @@ services:
     restart: always
     image: nginxproxy/acme-companion:2.1.0
     container_name: nginx-letsencrypt
-    volumes_from:
-      - nginx
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
       - ./nginx/vhost.d:/etc/nginx/vhost.d
